@@ -1,6 +1,7 @@
-# Inverse Material Design with Transformers
+# LayerForge
+## Multilayer Material Design Dataset Generator
 
-This project explores the use of transformer architectures to solve inverse problems in material design, specifically focusing on multi-layer materials with specific optical properties.
+LayerForge is a tool made for generating comprehensive datasets of multilayer material designs and their corresponding optical properties. The project leverages the refractiveindex.info database for material properties and tmm-fast for accurate spectrum computations.
 
 ## Project Structure
 
@@ -32,7 +33,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-The project uses tmm_fast to compute optical properties of multi-layer materials. The workflow consists of:
+LayerForge utilizes tmm-fast to compute optical properties of multilayer materials. The workflow consists of:
 
 1. Generating random material sequences with specified thicknesses
 2. Computing their optical properties (absorption/reflection spectra)
@@ -40,7 +41,7 @@ The project uses tmm_fast to compute optical properties of multi-layer materials
 
 ### Configuration
 
-Edit `config.yaml` to modify:
+Edit `config.yaml` to customize:
 - Available materials
 - Layer thickness ranges
 - Number of layers
@@ -59,7 +60,7 @@ print(generator.sequence_to_string(sequence))  # Output format: "Au_10+Ag_20+SiO
 
 ### Generating Datasets
 
-You can generate datasets using the main.py script:
+Generate datasets using the main.py script:
 
 ```bash
 python main.py
