@@ -1,0 +1,54 @@
+# Mappings to refractiveindex.info database
+# Used only when material data is not found locally
+material_mappings:
+  Au: "main/Au/Johnson"      # Gold (Johnson and Christy 1972)
+  Ag: "main/Ag/Johnson"      # Silver (Johnson and Christy 1972)
+  Al: "main/Al/Rakic"            # Aluminum (Brendel-Bormann model)
+  SiO2: "main/SiO2/Malitson"        # Silicon dioxide (glass)
+
+
+simulation:
+  max_layers: 10
+  thickness:
+    min: 5  # nm
+    max: 200  # nm
+    step: 5  # nm discretization step
+  wavelength:  
+    min: 300  # nm
+    max: 800  # nm
+    points: 50  # number of points to sample
+  angle:
+    type: "range"  # can be "single" or "range"
+    value: 0  # used when type is "single", angle in degrees
+    min: 0  # used when type is "range", angle in degrees
+    max: 80  # used when type is "range", angle in degrees
+    step: 5  # used when type is "range", angle step in degrees
+  polarization: "both"  # can be "s", "p", or "both"
+  ambient_medium: "air"  # material above the multilayer stack
+  substrate: "glass"  # material below the multilayer stack
+
+dataset:
+  # Basic dataset parameters
+  num_samples: 10
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  
+  # Directories
+  save_dir: "data"
+  material_data_dir: "data/material_properties"
+  dataset_dir: "data/processed_dataset"
+  
+  # Format settings
+  format: "pytorch"  # output format (pytorch or numpy)
+  save_format: "pt"  # file extension for saved tensors
+  
+  # Sequence generation settings
+  min_layers: 2      # minimum number of layers in a sequence
+  max_layers: 8      # maximum number of layers in a sequence
+  
+  # Properties to include in output
+  properties: ["R", "T", "A"]  # which optical properties to include
+  
+  # Random seed for reproducibility
+  random_seed: 42 

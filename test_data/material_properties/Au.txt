@@ -1,0 +1,8 @@
+# Optical constants for Au
+# wavelength(nm) n k
+# Data source: https://refractiveindex.info/
+300.0 1.525765 1.887835
+425.0 1.453198 1.951198
+550.0 0.424149 2.472051
+675.0 0.136556 3.836844
+800.0 0.153518 4.907653

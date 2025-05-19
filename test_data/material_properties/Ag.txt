@@ -1,0 +1,8 @@
+# Optical constants for Ag
+# wavelength(nm) n k
+# Data source: https://refractiveindex.info/
+300.0 1.345294 0.984859
+425.0 0.043198 2.402203
+550.0 0.059582 3.597367
+675.0 0.046556 4.605278
+800.0 0.036759 5.569803
